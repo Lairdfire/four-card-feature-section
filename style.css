@@ -1,0 +1,200 @@
+:root {
+--clr-primary-red: hsl(0, 78%, 62%) ;
+--clr-primary-cyan: hsl(180, 62%, 55%) ;
+--clr-primary-orange: hsl(34, 97%, 64%) ;
+--clr-primary-blue: hsl(212, 86%, 64%) ;
+
+--clr-neutral-300-darkblue: hsl(234, 12%, 34%) ;
+--clr-primary-600-grayblue: hsl(229, 6%, 66%) ; 
+--clr-primary-900-lightgray: hsl(0, 0%, 98%) ;
+
+--fw-regular: 200;
+--fw-bold: 400;
+--fw-extrabold: 600;
+
+}
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  border: none;
+  box-sizing: border-box;
+}
+
+/*
+    2. Remove default margin
+  */
+* {
+  margin: 0;
+}
+
+/*
+    Typographic tweaks!
+    3. Add accessible line-height
+    4. Improve text rendering
+  */
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/*
+    5. Improve media defaults
+  */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/*
+    6. Remove built-in form typography styles
+  */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/*
+    7. Avoid text overflows
+  */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/*
+    8. Create a root stacking context
+  */
+#root,
+#__next {
+  isolation: isolate;
+}
+
+/* General styling */
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    display: flex ;
+    justify-content: center;
+    align-items: center;
+    background-color: #FAFAFA;
+    padding: 32px;
+  }
+
+.flex-title-group {
+  text-align: center;
+  display: flex ;
+  flex-direction: column ;
+}
+
+.title {
+  color: var(--clr-neutral-300-darkblue) ;
+  font-size: 24px;
+  font-weight: var(--fw-extrabold);
+  line-height: normal;
+  letter-spacing: 0.167px;
+  
+}
+
+.title__regular {
+  font-weight: var(--fw-regular);
+}
+
+.title__subtitle {
+  font-weight: var(--fw-bold);
+  line-height: 25px;
+  letter-spacing: 0.104px;
+  margin-top: 13px;
+  margin-bottom: 76px;
+  opacity: 0.5;
+
+  max-width: 540px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.flex-cards-group {
+
+  display: flex ;
+  flex-wrap: wrap ;
+  gap: 25px ;
+  justify-content: center ;
+}
+
+.card {
+  min-width: 311px;
+  max-width: 350px;
+  min-height: 222px;
+  padding: 28px;
+  border-radius: 8px;
+  background: #FFF;
+  box-shadow: 0px 15px 30px -11px var(--clr-primary-600-grayblue);
+  color: var(--clr-neutral-300-darkblue);
+  position: relative;
+  overflow: hidden;
+}
+
+.card__title {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.card__text {
+  margin-top: 0;
+  font-size: 13px;
+  font-weight: var(--fw-bold);
+  line-height: 23px;
+  letter-spacing: 0.09px;
+  opacity: 0.5;
+}
+
+.card__img {
+  height: 57px;
+  width: 57px;
+  margin-right: 28px;
+  margin-bottom: 28px;
+  margin-left: auto;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.card__supervisor-divider {
+  height: 4px;
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  width: 350px;
+}
+
+.supervisor {
+  background-color: var(--clr-primary-cyan);
+}
+
+.teambuilder {
+  background-color: var(--clr-primary-red);
+}
+
+.karma {
+  background-color: var(--clr-primary-orange);
+}
+
+.calculator {
+  background-color: var(--clr-primary-blue);
+}
