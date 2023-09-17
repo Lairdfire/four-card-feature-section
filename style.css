@@ -129,7 +129,7 @@ body {
 }
 
 .flex-cards-group {
-
+  max-width: 1440px;
   display: flex ;
   flex-wrap: wrap ;
   gap: 25px ;
@@ -197,4 +197,29 @@ body {
 
 .calculator {
   background-color: var(--clr-primary-blue);
+}
+
+@media (min-width: 1176px) {
+  body {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+
+  .title {
+    font-size: 36px;
+    letter-spacing: 0.25px;
+  }
+
+  .card__img {
+    height: 64px;
+    width: 64px;
+}
+
+  .flex-cards-group > :nth-child(3) {
+    order: 2
+  }
+
+  .flex-cards-group > :first-child, .flex-cards-group > :nth-child(4) {
+    transform: translateY(50%);
+  }
 }
